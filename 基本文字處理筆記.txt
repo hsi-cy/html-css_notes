@@ -1,0 +1,162 @@
+HEAD
+- contains things that don't show in the webpage
+1. title -> the title shown on your tab
+2. metadata -> css, font, etc
+
+COMMON METADATA:
+<meta charset="utf-8">
+# to show different languages
+
+<meta name="author" content="Chris Mills">
+<meta name="description" content="The MDN Web Docs Learning Area aims to provide
+complete beginners to the Web with all they need to know to get
+started with developing web sites and applications.">
+# for search engine to show on the search page
+
+OTHER METADATA LIKE THESE:
+<meta property="og:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png">
+<meta property="og:description" content="The Mozilla Developer Network (MDN) provides
+information about Open Web technologies including HTML, CSS, and APIs for both Web sites
+and HTML5 Apps. It also documents Mozilla products, like Firefox OS.">
+<meta property="og:title" content="Mozilla Developer Network">
+# 這樣傳連結給別人的時候會顯示縮圖和簡介
+
+HTML TEXT FUNDAMENTALS
+通常每頁只會有一個 h1
+
+LISTS 有兩種 ordered<ol> & unordered<ul>
+子條 就 <li>
+
+INLINE VS BLOCK ELEMENT
+INLINE 不會自動換行
+block 會自動換行
+cheat sheet:
+http://www.simplehtmlguide.com/cheatsheet.php
+
+HOW TO MANAGE URLS PATHS
+Same directory:
+<a href="contacts.html">contacts page</a>
+
+Moving down into subdirectories:
+<a href="projects/index.html">project homepage</a>
+
+Moving back up into parent directories:
+<a href="../pdfs/project-brief.pdf">project brief</a>
+.. 兩點代表回上一個資料夾 可以重複使用如：
+ ../../../complex/path/to/my/file.html.
+
+連結也可以連回html的某一部份 稱作 document fragments
+首先要先為那部分做個 id 
+<a href="#Mailing_address">company mailing address</a>
+再用井字加上id 寫在anchor tag上
+
+ABSOLUTE VS RELATIVE URLs
+An absolute URL will always point to the same location, no matter where it is used.
+
+1. Link best practices
+Use clear link wording
+-> Download Firefox 比 click here to download firefox 要來得好
+
+2. Use relative links wherever possible
+在linking between locak websites時 能使用relative就用relative
+但站外連結就必須使用 absolute
+
+3. 當超連結不是網址時（下載或是影片等）要標示清楚
+
+4. 當是下載連結時 用download attribute 
+<a href="https://download.mozilla.org/?product=firefox-latest-ssl&os=win64&lang=en-US"
+   download="firefox-latest-64bit-installer.exe">
+  Download Latest Firefox for Windows (64-bit) (English, US)
+</a>
+這個attribute 的內容就是下載檔案的名稱
+
+EMAIL LINKS
+<a href="mailto:nowhere@mozilla.org">Send email to nowhere</a>
+這是最普遍的寄送email方式 用超連結
+Ｈere are a few other sample mailto URLs:
+1. mailto:
+2. mailto:nowhere@mozilla.org
+3. mailto:nowhere@mozilla.org,nobody@mozilla.org
+4. mailto:nowhere@mozilla.org?cc=nobody@mozilla.org
+5. mailto:nowhere@mozilla.org?
+    cc=nobody@mozilla.org&
+    subject=This%20is%20the%20subject
+
+進階文字排版
+description lists <dl>
+each term is wrapped in a <dt> (description term) element, 
+and each description is wrapped in a <dd> (description definition)
+
+QUOTATIONS
+HTML also has features available for marking up quotations;
+which element you use depends on whether you are marking up a block or inline quotation.
+
+1. Blockquotes:
+    If a section of block level content (be it a paragraph, multiple paragraphs, a list, etc.)
+    is quoted from somewhere else, you should wrap it inside a <blockquote> element to signify
+    this, and include a URL pointing to the source of the quote inside a cite attribute.
+    For example, the following markup is taken from the MDN <blockquote> element page:
+<p>Here below is a blockquote..</p>
+<blockquote cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/blockquote">
+  <p>The <strong>HTML <code>&lt;blockquote&gt;</code> Element</strong> (or <em>HTML Block
+  Quotation Element</em>) indicates that the enclosed text is an extended quotation.</p>
+</blockquote>
+
+2. Inline quotations:
+    Inline quotations work in exactly the same way, except that they use the <q> element.
+    For example, the below bit of markup contains a quotation from the MDN <q> page:
+<p>
+The quote element — <code>&lt;q&gt;</code> — is 
+<q cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/q">
+intended for short quotations that don't require paragraph breaks.
+</q></p>
+
+CITATIONS
+The content of the cite attribute sounds useful, but unfortunately browsers,
+screenreaders, etc. don't really do much with it. There is no way to get the 
+browser to display the contents of cite, without writing your own solution using 
+JavaScript or CSS. If you want to make the source of the quotation available on 
+the page you need to make it available in the text via a link or some other appropriate way.
+something like below:
+<p>According to the <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/blockquote">
+<cite>MDN blockquote page</cite></a>:
+</p>
+
+<blockquote cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/blockquote">
+  <p>The <strong>HTML <code>&lt;blockquote&gt;</code> Element</strong> (or <em>HTML Block
+  Quotation Element</em>) indicates that the enclosed text is an extended quotation.</p>
+</blockquote>
+
+<p>The quote element — <code>&lt;q&gt;</code> — is <q cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/q">intended
+for short quotations that don't require paragraph breaks.</q> -- <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/q">
+<cite>MDN q page</cite></a>.</p>
+
+ABBREVIATIONS
+ <abbr> — this is used to wrap around an abbreviation or acronym, and provide a full 
+ expansion of the term (included inside a title attribute.) Let's look at a couple of examples:
+
+ <p>We use <abbr title="Hypertext Markup Language">HTML</abbr> to structure our web documents.</p>
+
+ 可以呈現程式碼 
+ https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting
+
+時間和日期
+<time datetime="2016-01-20">20 January 2016</time>
+一些好用的範例
+<!-- Standard simple date -->
+<time datetime="2016-01-20">20 January 2016</time>
+<!-- Just year and month -->
+<time datetime="2016-01">January 2016</time>
+<!-- Just month and day -->
+<time datetime="01-20">20 January</time>
+<!-- Just time, hours and minutes -->
+<time datetime="19:30">19:30</time>
+<!-- You can do seconds and milliseconds too! -->
+<time datetime="19:30:01.856">19:30:01.856</time>
+<!-- Date and time -->
+<time datetime="2016-01-20T19:30">7.30pm, 20 January 2016</time>
+<!-- Date and time with timezone offset -->
+<time datetime="2016-01-20T19:30+01:00">7.30pm, 20 January 2016 is 8.30pm in France</time>
+<!-- Calling out a specific week number -->
+<time datetime="2016-W04">The fourth week of 2016</time>
+

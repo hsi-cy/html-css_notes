@@ -1,0 +1,6 @@
+基本網站架構有
+1. header
+2. navigation bar
+3. main content
+4. sidebar
+5. footer
