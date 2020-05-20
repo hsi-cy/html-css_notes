@@ -1,6 +1,29 @@
 基本網站架構有
 1. header
+<header>
+
 2. navigation bar
+<nav>
+
 3. main content
+<main> 一個頁面只用一個 通常會在body的第一個tag
+    <article> 獨立的一個block 像是一則blog post
+        <section> 與其他sections 合組成一個功能類的集合體 通常一個section的開始會有一個h tag heading
+        可以在section下加入article也可在article下加入section 單看context
+            <div>
+
 4. sidebar
+<aside> 
+often placed inside <main>
+
 5. footer
+<footer>
+
+NON-SEMANTIC WRAPPERS:
+<div> and <span> with class attributes
+div block
+span inline
+
+LINE BREAKS & HORIZONTAL RULES
+<br> 下一行
+<hr> 在頁面中加入一行分隔線
