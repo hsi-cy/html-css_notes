@@ -1,0 +1,42 @@
+1. IMAGES IN HTML
+<img>, <figure>
+*** 
+img 沒什麼特別難懂的
+figure 相關 code 可參考
+用figure加入標題
+<figure>
+  <img src="images/dinosaur.jpg"
+       alt="The head and torso of a dinosaur skeleton;
+            it has a large head with long sharp teeth"
+       width="400"
+       height="341">
+
+  <figcaption>A T-Rex on display in the Manchester University Museum.</figcaption>
+</figure>
+注意！ caption, alt 不應該寫同樣的東西 atl主要用在照片無法顯示和給視障人士使用 caption則是隨著照片顯示
+的文字
+＊＊＊
+A figure doesn't have to be an image. It is an independent unit of content that:
+- Expresses your meaning in a compact, easy-to-grasp way.
+- Could go in several places in the page's linear flow.
+- Provides essential information supporting the main text.
+- A figure could be several images, a code snippet, audio, video, equations, 
+    a table, or something else.
+＊＊＊
+
+2. VIDEO & AUDIO CONTENT
+<video>, <audio>
+
+
+
+
+
+3. OTHER EMBEDDING TECH
+<iframe>, <embed>, <object>
+
+4. ADDING VECTOR GRAPHICS TO THE WEB
+vector graphics don't zoom in or out like png or jpg.
+it will remain the same in different size
+
+5. RESPONSIVE IMAGES
+this will be explained in more details in responsive design in CSS part.
