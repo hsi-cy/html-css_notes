@@ -26,17 +26,31 @@ A figure doesn't have to be an image. It is an independent unit of content that:
 
 2. VIDEO & AUDIO CONTENT
 <video>, <audio>
+若在video tags裡面加文字的話 影片無法顯示時就會由此串文字替代
 
-
-
+一些多媒體的專有名詞
+a. container formats - mp3 mp4 等檔名
+此中包含
+    metadata
+    Audio Tracks
+    Video Tracks
+    Text Tracks
+別用這個
+用 iframe載入youtube影片吧
 
 
 3. OTHER EMBEDDING TECH
 <iframe>, <embed>, <object>
+可嵌入pdf, svg, flash等檔案
+
 
 4. ADDING VECTOR GRAPHICS TO THE WEB
 vector graphics don't zoom in or out like png or jpg.
 it will remain the same in different size
+有兩種圖片檔 raster images & vector images
+raster -> .jpg .gif etc.
+vector -> .svg
+vector 優點： 檔案容量較小、放大時不會損失畫質
 
 5. RESPONSIVE IMAGES
 this will be explained in more details in responsive design in CSS part.
