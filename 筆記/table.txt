@@ -1,0 +1,45 @@
+<col>, <colgroup> are useful for styling the table
+
+the basic table structure:
+<table>
+  <colgroup>
+    <col>
+    <col style="background-color: yellow">
+  </colgroup>
+  <tr>
+    <th>Data 1</th>
+    <th>Data 2</th>
+  </tr>
+  <tr>
+    <td>Calcutta</td>
+    <td>Pizza</td>
+  </tr>
+  <tr>
+    <td>Robots</td>
+    <td>Jazz</td>
+  </tr>
+</table>
+
+這個寫法 會讓第二直行 Data2變成黃色
+基本上 表格的style設定要用 col, colgroup, thead, tbody, tfoot 來協助
+不然要一格一格設定
+
+The scope attribute
+<thead>
+  <tr>
+    <th scope="col">Purchase</th>
+    <th scope="col">Location</th>
+    <th scope="col">Date</th>
+    <th scope="col">Evaluation</th>
+    <th scope="col">Cost (€)</th>
+  </tr>
+</thead>
+<tr>
+  <th scope="row">Haircut</th>
+  <td>Hairdresser</td>
+  <td>12/09</td>
+  <td>Great idea</td>
+  <td>30</td>
+</tr>
+
+scope 還有兩種attrs colgroup, rowgroup

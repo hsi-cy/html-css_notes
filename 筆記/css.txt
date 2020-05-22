@@ -1,0 +1,36 @@
+cascade rule
+如果有衝突的時候 會用最後被定義的style
+
+CSS 有兩種components 
+- properties
+- vlaues
+
+a declaration block consists of a pair of property and its value
+
+@rules
+one common rule is @media
+Example:
+基本設定為粉色 但在width < 30em 的情況下 變成藍色
+@media()括號內放條件
+條件符合就觸發
+
+body {
+  background-color: pink;
+}
+
+@media (min-width: 30em) {
+  body {
+    background-color: blue;
+  }
+}
+
+Some properties like font, background, padding, border, and margin are called 
+shorthand properties. This is because shorthand properties set several values 
+in a single line.
+Examples:
+padding: 10px 15px 15px 5px; 上右下左
+or
+padding: 10px 15px; 上下、左右
+
+background: red url(bg-graphic.png) 10px 10px repeat-x fixed;
+color = red; image = url(); position = 10px 10px; repeat = repeat-x; attachment = fixed
